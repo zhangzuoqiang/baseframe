@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		  "-//Hibernate/Hibernate Mapping DTD//EN"
+		  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="cn.hs.module.user.domain.User" table="BASE_USER">
+		<id name="userID" column="USER_ID" type="string">
+			<generator class="uuid.hex" />
+		</id>
+		<property name="loginID" column="LOGIN_ID" type="string"></property>
+		<property name="passWord" column="PASSWORD" type="string"></property>
+		<property name="userName" column="USER_NAME" type="string"></property>
+		<property name="sexCode" column="SEX_CODE" type="string"></property>
+		<property name="birthday" column="BIRTHDAY" type="long"></property>
+		<property name="phone" column="PHONE" type="string"></property>
+		<property name="mobileTelephone" column="MOBILE_PHONE" type="string"></property>
+		<property name="email" column="EMAIL" type="string"></property>
+		<property name="paperTypeCode" column="PAPER_TYPE_CODE" type="string"></property>
+		<property name="paperNum" column="PAPER_NUM" type="string"></property>
+		<property name="remark" column="REMARK" type="string"></property>
+		<property name="createTime" column="CREATE_TIME" type="long"></property>
+		<property name="lastUpdateTime" column="LAST_UPDATE_TIME" type="long"></property>
+		<property name="orderNum" column="ORDER_NUM" type="integer"></property>
+		<property name="activeState" column="ACTIVE_STATE" type="integer"></property>
+	</class>
+</hibernate-mapping>
+

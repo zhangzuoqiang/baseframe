@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		  "-//Hibernate/Hibernate Mapping DTD//EN"
+		  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="cn.hs.module.department.domain.Department"
+		table="BASE_DEPARTMENT">
+		<id name="deptID" column="DEPID" type="string">
+			<generator class="uuid.hex" />
+		</id>
+		<property name="deptName" column="DEPNAME" type="java.lang.String"></property>
+		<property name="deptCode" column="DEPT_CODE" type="java.lang.String"></property>
+		<property name="companyLevel" column="COMPANY_LEVEL" type="integer"></property>
+		<property name="deptAddress" column="DEPT_ADDRESS" type="java.lang.String"></property>
+		<property name="deptPhone" column="DEPT_PHONE" type="java.lang.String"></property>
+		<property name="linkMan" column="LINK_MAN" type="java.lang.String"></property>
+		<property name="treepath" column="TREEPATH" type="java.lang.String"></property>
+		<property name="parentID" column="PARENT_ID" type="java.lang.String"></property>
+		<property name="remark" column="REMARK" type="java.lang.String"></property>
+		<property name="createTime" column="CREATE_TIME" type="java.lang.Long"></property>
+		<property name="lastUpdateTime" column="LAST_UPDATE_TIME" type="java.lang.Long"></property>
+		<property name="orderNum" column="ORDER_NUM" type="integer"></property>
+		<property name="activeState" column="ACTIVE_STATE" type="integer"></property>
+	</class>
+</hibernate-mapping>
+

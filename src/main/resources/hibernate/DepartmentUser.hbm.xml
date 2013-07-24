@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+		  "-//Hibernate/Hibernate Mapping DTD//EN"
+		  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="cn.hs.module.department.domain.DepartmentUser" table="BASE_DEPARTMENT_USER">
+		<id name="deptUserID" column="DEPUSER_ID" type="string">
+			<generator class="uuid.hex" />
+		</id>
+		<many-to-one name="user" class="cn.hs.module.user.domain.User" fetch="select">
+        	<column name="USER_ID" not-null="true" />
+    	</many-to-one>
+    	<many-to-one name="department" class="cn.hs.module.department.domain.Department" fetch="select">
+        	<column name="DEPID" not-null="true" />
+    	</many-to-one>
+    	<many-to-one name="oldDepartment" class="cn.hs.module.department.domain.Department" fetch="select">
+        	<column name="OLD_DEPTID" not-null="true" />
+    	</many-to-one>
+	</class>
+</hibernate-mapping>
+
